@@ -1,6 +1,4 @@
-# Operating-Systems-Asignment 2
 #!/bin/bash
-
 DIALOG_CANCEL=1
 DIALOG_ESC=255
 HEIGHT=0
