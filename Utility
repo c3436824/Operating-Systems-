@@ -75,13 +75,13 @@ case $Directory_Seletion in                        # provide a menu that the use
 		echo "Box closed.";;
 esac
 ;;
-5)
-result=$(du -ab>ross.txt)               # Provide the user with the current director file sizes
+5)                                       # change to KB and human readable
+result=$(du -akh>ross.txt)               # Provide the user with the current director file sizes
 dialog --textbox ross.txt 60 30         # and write and store the results in "ross.Txt          
 ;;                                      # and present the results in in a dialog box.
 6)
-result=$(du -k | awk '{sum += $1}; END {print sum}')   # provide the user with the sum of the current size 
-display_result "Total size"                            # of the directory
+result=$(du -kh | awk '{sum += $1}; END {print sum}')   # provide the user with the sum of the current size 
+display_result "Total size"                              # of the directory thats human readable.
 ;;
 esac
 done
